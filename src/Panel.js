@@ -6,13 +6,29 @@ import './App.css';
 function GetAddress(privateKeyHex) {
     if (privateKeyHex.length !== 64)
         return ('Incorrect Private Key');
+    if ((isHex(privateKeyHex))) {
+
     var CoinKey = require('coinkey');
     var key = new CoinKey(new Buffer(privateKeyHex, 'hex'));
     return (key.publicAddress);
+    }
+        return ('Hex format required');
+}
+
+function isHex(h){
+        var regexp = /^[0-9a-fA-F]+$/;
+        if (regexp.test(h)) {
+            return true;
+        }
+        else {
+            return false;
+        }
 }
 
 function RandomPK(){
- console.log('test');
+    const secureRandom = require('secure-random');
+    let privateKey = secureRandom.randomBuffer(32);
+    return(privateKey.toString('hex'));
 }
 
 class Panel extends Component {
@@ -26,49 +42,47 @@ class Panel extends Component {
             {
                 PublicAddress: (GetAddress(this.state.PrivateKey))
             });
-
         console.log(this.state.PublicAddress);
-        document.getElementById("publicAddress").innerText = this.state.PublicAddress
     }
+
     generateRandom() {
         this.setState(
             {
-                // PrivateKey: (RandomPK()),
-                // PublicAddress: (GetAddress(this.state.PrivateKey)),
+                PrivateKey: (RandomPK()),
             });
-        RandomPK();
         console.log(this.state.PublicAddress);
-        document.getElementById("publicAddress").innerText = this.state.PublicAddress
     }
-
 
     render() {
         return (
             <div className="content">
                 <div role="tabpanel" className="tab-pane active" id="blockchain">
-                    <h3>Enter a private key</h3>
+                    <h3>Enter a private key or generate a random key:</h3><p> Your private key must have hexadecimal format and 64 char</p>
                     <div className="form-group form-inline">
-                        <div className="form-row">
+                        <div className="d-flex bd-highlight">
+                            <button className="btn btn-danger" onClick={() => {
+                                this.generateRandom()
+                            }}>
+                                Random
+                            </button>
                             <input
                                 id="privateKeyInput"
                                 type="text"
                                 className="form-control"
                                 placeholder="Private key"
                                 value={this.state.PrivateKey}
-                                style={{width: '500px'}}
+                                style={{width: '650px', 'marginLeft': '10px'}}
                                 onChange={e => this.setState({PrivateKey: e.target.value})}/>
                             <button className="set btn btn-success" style={{'marginLeft': '10px'}} onClick={() => {
                                 this.showAddress()
                             }}>
-                                Create
+                                Validate
                             </button>
-                            <button className="btn btn-danger" style={{'marginLeft': '10px'}} onClick={() => {
-                                this.generateRandom()
-                            }}>
-                                Random
-                            </button>
-                            <h3 id="publicAddress">{}</h3>
+
+
                         </div>
+                        <h5>{this.state.PublicAddress == "" ?  '' : 'Bitcoin Public Address: '}</h5>
+                        <h4>{this.state.PublicAddress == "" ?  '' : this.state.PublicAddress} </h4>
                     </div>
                 </div>
             </div>

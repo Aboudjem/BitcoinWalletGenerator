@@ -10,6 +10,7 @@
     "material-ui": "^0.20.2",
     "mocha": "^6.0.0",
     "qrcode-react": "^0.1.16",
+    "randhex": "^0.1.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-qr-code": "^0.1.3",

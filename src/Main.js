@@ -3,7 +3,6 @@ import React from "react";
 import './index.css';
 import './App.css';
 
-
 class Title extends Component {
     render() {
         return (

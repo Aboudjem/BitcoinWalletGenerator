@@ -38,6 +38,16 @@ code {
   border-radius: 10px;
 }
 
+h5 {
+  margin-top: 10px;
+}
+
+h4 {
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #28c749;
+}
+
 #title {
   margin: 50 auto 50 auto;
   color: green;
