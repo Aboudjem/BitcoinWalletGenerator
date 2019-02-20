@@ -1,0 +1,35 @@
+body {
+    background-image: url('https://www.hyperchain.net/img/home_banner_bg.png');
+
+}
+
+.content {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(10,10,10,0.90);
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#list {
+    width: 300px;
+    margin: 20 0 20 0;
+}
+
+#logo_matrice {
+    float: left;
+    /* background-color: rgba(0,0,0,0.75); */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#title {
+    background-color: rgba(0,0,0,0.75);
+    margin: 50 auto 50 auto;
+    color:white;
+    width: 330px;
+    padding: 20px;
+    font-family: "Courier new";
+}

@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SimpleBar from "./SimpleBar";
+import Title from "./Main"
+import Panel from "./Panel"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
           <SimpleBar/>
-          <SimpleBar/>
+          <Title/>
+          <Panel/>
       </div>
     );
   }
