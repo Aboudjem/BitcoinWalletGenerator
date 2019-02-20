@@ -1,60 +1,60 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://www.hyperchain.net/img/home_banner_bg.png');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('https://www.hyperchain.net/img/home_banner_bg.png');
 
 }
 
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .content {
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  background-color: rgba(10,10,10,0.90);
-  width: 900px;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding-top: 10px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    background-color: rgba(10, 10, 10, 0.90);
+    width: 900px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
 }
 
 #list {
-  width: 300px;
-  margin: 20 0 20 0;
+    width: 300px;
+    margin: 20 0 20 0;
 }
 
 #logo {
-  size: 5px;
-  padding: 20px;
-  border-radius: 10px;
+    size: 5px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 h5 {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 h4 {
-  padding-top: 10px;
-  padding-left: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 #title {
-  margin: 50 auto 50 auto;
-  color: green;
-  width: 330px;
-  padding: 30px;
+    margin: 50 auto 50 auto;
+    color: green;
+    width: 330px;
+    padding: 30px;
 }
 
 #id {
-  color: white;
+    color: white;
 }
