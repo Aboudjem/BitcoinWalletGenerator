@@ -20,9 +20,10 @@ code {
   color: white;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
   background-color: rgba(10,10,10,0.90);
-  width: 600px;
-  border: 2px solid black;
+  width: 900px;
+  border: 1px solid black;
   border-radius: 10px;
 }
 
@@ -31,9 +32,8 @@ code {
   margin: 20 0 20 0;
 }
 
-#logo_matrice {
-  /* float: left; */
-  /* background-color: rgba(0,0,0,0.75); */
+#logo {
+  size: 5px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -42,6 +42,9 @@ code {
   margin: 50 auto 50 auto;
   color: green;
   width: 330px;
-  padding: 20px;
-  font-family: "Courier new";
+  padding: 30px;
+}
+
+#id {
+  color: white;
 }
