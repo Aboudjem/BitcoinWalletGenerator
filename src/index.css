@@ -32,16 +32,15 @@ code {
 }
 
 #logo_matrice {
-  float: left;
+  /* float: left; */
   /* background-color: rgba(0,0,0,0.75); */
   padding: 20px;
   border-radius: 10px;
 }
 
 #title {
-  background-color: rgba(0,0,0,0.75);
   margin: 50 auto 50 auto;
-  color:white;
+  color: green;
   width: 330px;
   padding: 20px;
   font-family: "Courier new";

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import SimpleBar from "./SimpleBar";
 import { MuiThemeProvider, createMuiTheme} from '@material-ui/core'
 import App from "./App";
 

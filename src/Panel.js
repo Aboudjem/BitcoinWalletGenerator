@@ -4,6 +4,8 @@ import './index.css';
 import './App.css';
 
 function GetAddress(privateKeyHex) {
+    if (privateKeyHex.length != 64)
+        return ('Incorrect Private Key');
     var CoinKey = require('coinkey');
     var key = new CoinKey(new Buffer(privateKeyHex, 'hex'));
     return (key.publicAddress);
