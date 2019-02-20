@@ -4,6 +4,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core'
 import App from "./App";
+import SplitWallet from "./splitwallet";
 
 
 const theme = createMuiTheme({
@@ -19,6 +20,10 @@ const theme = createMuiTheme({
 
 
 ReactDOM.render(<MuiThemeProvider theme={theme}>
-    <App/>
+    <SplitWallet/>
 </MuiThemeProvider>, document.getElementById('root'));
+
+// ReactDOM.render(<MuiThemeProvider theme={theme}>
+//     <App/>
+// </MuiThemeProvider>, document.getElementById('root'));
 serviceWorker.register();
