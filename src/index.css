@@ -25,6 +25,7 @@ code {
   width: 900px;
   border: 1px solid black;
   border-radius: 10px;
+  padding-top: 10px;
 }
 
 #list {

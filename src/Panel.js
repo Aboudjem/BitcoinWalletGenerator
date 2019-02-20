@@ -60,7 +60,7 @@ class Panel extends Component {
                     <h3>Enter a private key or generate a random key:</h3><p> Your private key must have hexadecimal format and 64 char</p>
                     <div className="form-group form-inline">
                         <div className="d-flex bd-highlight">
-                            <button className="btn btn-danger" onClick={() => {
+                            <button className="set btn btn-secondary" onClick={() => {
                                 this.generateRandom()
                             }}>
                                 Random
