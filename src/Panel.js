@@ -5,14 +5,14 @@ import './App.css';
 
 function GetAddress(privateKeyHex) {
     if (privateKeyHex.length !== 64)
-        return ('Incorrect Private Key');
+        return (<h4 style={{color : '#c70032'}}>Incorrect Private Key</h4>);
     if ((isHex(privateKeyHex))) {
 
     var CoinKey = require('coinkey');
     var key = new CoinKey(new Buffer(privateKeyHex, 'hex'));
-    return (key.publicAddress);
+        return (<h4 style={{color : '#28c749'}}>{key.publicAddress}</h4>);
     }
-        return ('Hex format required');
+    return (<h4 style={{color : '#c70032'}}>Hex format required</h4>);
 }
 
 function isHex(h){
@@ -81,8 +81,8 @@ class Panel extends Component {
 
 
                         </div>
-                        <h5>{this.state.PublicAddress == "" ?  '' : 'Bitcoin Public Address: '}</h5>
-                        <h4>{this.state.PublicAddress == "" ?  '' : this.state.PublicAddress} </h4>
+                        <h5>{this.state.PublicAddress === "" ?  '' : 'Bitcoin Public Address: '}</h5>
+                        {this.state.PublicAddress === "" ?  '' : <h4>{this.state.PublicAddress}</h4>}
                     </div>
                 </div>
             </div>
