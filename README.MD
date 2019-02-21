@@ -3,7 +3,7 @@
 Bitcoin Wallet Generator allows you to create your Bitcoin wallet by choosing your own Private Key, 
 you can also generate a shared private key using Shamir's Secret Sharing polynomial also known as 'sss' 
 (It is a form of secret sharing, where a secret is divided into parts). 
-<img src="https://media.giphy.com/media/l49JMVDvP8D38LHwI/giphy.gif" width="50" height="50">
+<img src="https://media.giphy.com/media/l49JMVDvP8D38LHwI/giphy.gif" width="15" height="15">
 
 ## Installation
 
