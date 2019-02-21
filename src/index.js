@@ -10,9 +10,9 @@ import SimpleBar from "./SimpleBar";
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#383838',
             selected: '#000000',
             light: '#757ce8',
+            main: '#3f50b5',
             dark: '#002884',
             contrastText: '#fff',
         },
@@ -20,7 +20,7 @@ const theme = createMuiTheme({
             main: '#0093FF',
         },
         inherit: {
-            main: '#4b4b4b'
+            main: '#3f50b5'
         },
     },
 });
