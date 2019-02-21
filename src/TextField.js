@@ -61,10 +61,11 @@ class TextFields extends React.Component {
         return (
             <div>
                 <div className="buttons">
-                <button className="buttons" class="btn btn-primary" onClick={(e) => this.addShare(e)}>Add Share</button>
-                <button class="btn btn-success" onClick={(e) => this.handleSubmit(e)}> Submit </button>
-                    <h4 style={{color: '#28c749'}}>{this.state.rec}</h4>
+                <button class="btn btn-primary" style={{'margin-right' : '10px'}} onClick={(e) => this.addShare(e)}>Add Share</button>
+                <button class="btn btn-success" style={{'margin-left' : '10px'}} onClick={(e) => this.handleSubmit(e)}> Submit </button>
                 </div>
+                {this.state.rec.length > 0 ?
+                    (<h5 className="walletdisplay" style={{color: '#28c749', 'align' : 'center'}}>Private Key: {this.state.rec}</h5>) : ''}
                 <div className="shareinput">
                 {
                     this.state.shares.map((share, i) => {

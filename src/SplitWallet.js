@@ -109,7 +109,7 @@ displayRow(){
     return(<Paper style={{overflowX: 'auto'}}>
         <Table>
             <TableHead>
-                <TableRow style={{'overflow-x': 'auto'}}>
+                <TableRow>
                     <TableCell>Shares</TableCell>
                 </TableRow>
             </TableHead>
@@ -128,7 +128,7 @@ displayRow(){
     render() {
     return (
         <div>
-            <div style={{'display': 'flex'}}>
+            <div style={{'display': 'flex', 'justify-content': 'space-around'}}>
                 <input
                     id="privateKeyInput"
                     type="text"
@@ -141,16 +141,18 @@ displayRow(){
                 <input
                     id="numshare"
                     type="number"
+                    className="form-control"
                     placeholder="Number of share"
                     onChange={e => this.setState({Numshare: parseInt(e.target.value)})}
                 />
                 <input
                     id="threshold"
                     type="number"
+                    className="form-control"
                     placeholder="Threshold"
                     onChange={e => this.setState({Threshold: parseInt(e.target.value)})}
                 />
-                <button class="btn btn-success" onClick={() => {
+                <button class="btn btn-success" style={{'margin-left' : '10px'}} onClick={() => {
                     this.setRow();
                     console.log(this.state);
                     this.setState({run : 1});

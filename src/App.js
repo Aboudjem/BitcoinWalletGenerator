@@ -29,6 +29,7 @@ const styles = theme => ({
         marginRight: 'auto',
         background: 'rgba(0, 0, 0, 0.2)',
         borderRadius: '10px',
+        width: '95%',
     },
 });
 
@@ -46,9 +47,9 @@ class App extends React.Component {
         const { value } = this.state;
 
         return (
-            <div className={classes.root}>
+            <div className={classes.root} >
                 <AppBar position="static">
-                    <Tabs value={value} onChange={this.handleChange}>
+                    <Tabs        style={{ 'display': 'flex', 'justify-content': 'space-around'}} value={value} onChange={this.handleChange}>
                         <Tab label="Generate Wallet" />
                         <Tab label="Split Wallet" />
                         <Tab label="Combined Private Key" />
@@ -56,7 +57,7 @@ class App extends React.Component {
                 </AppBar>
 
                 {value === 0 && <TabContainer>{<WalletGenerator/>}</TabContainer>}
-                {value === 1 && <TabContainer>{<SplitKey />}</TabContainer>}
+                {value === 1 && <TabContainer>{<SplitKey  />}</TabContainer>}
                 {value === 2 && <TabContainer>{<TextFields />}</TabContainer>}
             </div>
         );
