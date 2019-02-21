@@ -58,3 +58,20 @@ h4 {
 #id {
     color: white;
 }
+
+.shareinput {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    /*opacity: 1;*/
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+}
+
+.textfield {
+    padding-top: 10px;
+}

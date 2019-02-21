@@ -4,8 +4,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core'
 import App from "./App";
-import SplitWallet from "./splitwallet";
+import Title from "./Logo"
+import SimpleBar from "./SimpleBar";
 
+import TextFields from "./TextField"
 
 const theme = createMuiTheme({
     palette: {
@@ -18,12 +20,15 @@ const theme = createMuiTheme({
     },
 });
 
+//
+// ReactDOM.render(<MuiThemeProvider theme={theme}>
+//     {/*<SplitKey/>,*/}
+//     <TextFields/>
+// </MuiThemeProvider>, document.getElementById('root'));
 
 ReactDOM.render(<MuiThemeProvider theme={theme}>
-    <SplitWallet/>
+    <SimpleBar/>,
+    <Title/>,
+    <App/>,
 </MuiThemeProvider>, document.getElementById('root'));
-
-// ReactDOM.render(<MuiThemeProvider theme={theme}>
-//     <App/>
-// </MuiThemeProvider>, document.getElementById('root'));
 serviceWorker.register();

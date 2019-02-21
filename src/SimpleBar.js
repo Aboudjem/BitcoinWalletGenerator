@@ -12,7 +12,7 @@ const styles = {
     },
 };
 
-function SimpleBar(props) {
+function Header(props) {
     const {classes} = props;
 
     return (
@@ -28,8 +28,8 @@ function SimpleBar(props) {
     );
 }
 
-SimpleBar.propTypes = {
+Header.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleBar);
+export default withStyles(styles)(Header);

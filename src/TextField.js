@@ -1,0 +1,87 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import "./index.css";
+
+const sss = require('shamirs-secret-sharing');
+
+
+const styles = theme => ({
+    container: {
+        display: 'flex',
+        flexWrap: 'wrap',
+    },
+    textField: {
+        marginLeft: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+        width: 200,
+    },
+    dense: {
+        marginTop: 19,
+    },
+    menu: {
+        width: 200,
+    },
+});
+
+
+class TextFields extends React.Component {
+    state = {
+        shares: [],
+        rec: "",
+    };
+
+    handleChange (e, i) {
+        this.state.shares[i] = e.target.value;
+        this.setState({shares : this.state.shares});
+    };
+
+    handleSubmit(e) {
+
+        console.log(this.states.shares);
+        return false;
+        if(this.state.shares.length > 1)
+        {
+        const recovered = sss.combine(this.state.shares.slice(0, this.state.shares.length));
+        this.setState({rec : recovered.toString()});
+        }
+    }
+
+    addShare() {
+        this.setState({shares: [...this.state.shares, ""]})
+    }
+
+    render() {
+        const {classes} = this.props;
+
+        return (
+            <div>
+                <div className="buttons">
+                <button className="buttons" class="btn btn-primary" onClick={(e) => this.addShare(e)}>Add Share</button>
+                <button class="btn btn-success" onClick={(e) => this.handleSubmit(e)}> Submit </button>
+                    <h4 style={{color: '#28c749'}}>{this.state.rec}</h4>
+                </div>
+                <div className="shareinput">
+                {
+                    this.state.shares.map((share, i) => {
+                        return (
+                            <div className="textfield" key={i}>
+                                <TextField fullWidth onChange={(e) => this.handleChange(e, i)}
+                                    value={share}
+                                    placeholder={'Enter share ' + (i)}
+                                />
+                            </div>
+                        )
+                    })
+                }
+                </div>
+            </div>);
+    }
+}
+
+TextFields.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(TextFields);

@@ -30,7 +30,7 @@ function RandomPK() {
     return (privateKey.toString('hex'));
 }
 
-class Panel extends Component {
+class WalletGenerator extends Component {
     state = {
         PrivateKey: "",
         PublicAddress: "",
@@ -90,4 +90,4 @@ class Panel extends Component {
     }
 }
 
-export default Panel;
+export default WalletGenerator;
