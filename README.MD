@@ -32,10 +32,10 @@ npm install
 
 ## Example
 
-![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator1.png)
-![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator2.png)
-![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator3.png)
-![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator4.png)
+![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator1.png)
+![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator2.png)
+![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator3.png)
+![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator4.png)
 
 
 ## Contributing
