@@ -30,17 +30,20 @@ class TextFields extends React.Component {
     state = {
         shares: [],
         rec: "",
+        check: 0,
     };
 
     handleChange (e, i) {
         this.state.shares[i] = e.target.value;
         this.setState({shares : this.state.shares});
+        this.setState({check : 1});
     };
 
     handleSubmit(e) {
+        if (this.state.check === 0){
+            return false;
+        }
 
-        console.log(this.states.shares);
-        return false;
         if(this.state.shares.length > 1)
         {
         const recovered = sss.combine(this.state.shares.slice(0, this.state.shares.length));
