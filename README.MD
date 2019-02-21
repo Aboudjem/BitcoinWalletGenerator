@@ -30,5 +30,13 @@ npm install
 - generate a Shared Private Key click on Validate to display shared parts.
 - Combine your shared private keys to display the private Key
 
+## Example
+
+![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator1.png)
+![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator2.png)
+![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator3.png)
+![Image of Wallet Generator](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator4.png)
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
