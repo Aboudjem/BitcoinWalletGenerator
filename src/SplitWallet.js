@@ -106,17 +106,17 @@ setRow() {
 }
 
 displayRow(){
-    return(<Paper>
+    return(<Paper style={{overflowX: 'auto'}}>
         <Table>
             <TableHead>
-                <TableRow>
+                <TableRow style={{'overflow-x': 'auto'}}>
                     <TableCell>Shares</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>
                 {(SplitWallet(this.state.Numshare, this.state.Threshold, this.state.PrivateKey)).map(row => (
                     <TableRow key={row.id}>
-                        <TableCell component="th" scope="row">
+                        <TableCell component="th" scope="row" >
                             {row.share}
                         </TableCell>
                     </TableRow>
