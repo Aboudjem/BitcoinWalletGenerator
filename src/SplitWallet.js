@@ -128,14 +128,14 @@ displayRow(){
     render() {
     return (
         <div>
-            <div style={{'display': 'flex', 'justify-content': 'space-around'}}>
+            <div style={{'display': 'flex', 'justify-content': 'space-around', 'margin-bottom' : '15px'}}>
                 <input
                     id="privateKeyInput"
                     type="text"
                     className="form-control"
                     value={this.state.PrivateKey}
                     placeholder="Private key"
-                    style={{width: '650px', 'marginLeft': '10px'}}
+                    style={{width: '650px', 'marginLeft': '5px'}}
                     onChange={e => this.setState({PrivateKey: e.target.value})}
                 />
                 <input
@@ -143,12 +143,14 @@ displayRow(){
                     type="number"
                     className="form-control"
                     placeholder="Number of share"
+                    style={{width: '240px', 'marginLeft': '5px'}}
                     onChange={e => this.setState({Numshare: parseInt(e.target.value)})}
                 />
                 <input
                     id="threshold"
                     type="number"
                     className="form-control"
+                    style={{width: '240px', 'marginLeft': '5px'}}
                     placeholder="Threshold"
                     onChange={e => this.setState({Threshold: parseInt(e.target.value)})}
                 />
@@ -156,10 +158,9 @@ displayRow(){
                     this.setRow();
                     console.log(this.state);
                     this.setState({run : 1});
-                    // verify(this.state.PrivateKey, this.state.Numshare, this.state.Threshold);
                 }}>Validate</button>
             </div>
-            {this.state.run == 1 ? verify(this.state.PrivateKey, this.state.Numshare, this.state.Threshold) : ''}
+            {this.state.run === 1 ? verify(this.state.PrivateKey, this.state.Numshare, this.state.Threshold) : ''}
             {this.state.rows.length > 0 ? this.displayRow() : ''}
         </div>
     );

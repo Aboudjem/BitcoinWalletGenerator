@@ -55,11 +55,11 @@ class WalletGenerator extends Component {
     render() {
         return (
             <div className="content">
-                <div role="tabpanel" className="tab-pane active" id="blockchain">
+                <div role="tabpanel" className="tab-pane active" id="blockchain" >
                     <h3>Enter a private key or generate a random key:</h3><p> Your private key must have hexadecimal
                     format and 64 chars</p>
                     <div className="form-group form-inline">
-                        <div className="d-flex bd-highlight">
+                        <div className="d-flex bd-highlight" >
                             <button className="set btn btn-secondary" onClick={() => {
                                 this.generateRandom()
                             }}>

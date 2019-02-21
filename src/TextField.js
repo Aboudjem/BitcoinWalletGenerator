@@ -33,21 +33,20 @@ class TextFields extends React.Component {
         check: 0,
     };
 
-    handleChange (e, i) {
+    handleChange(e, i) {
         this.state.shares[i] = e.target.value;
-        this.setState({shares : this.state.shares});
-        this.setState({check : 1});
+        this.setState({shares: this.state.shares});
+        this.setState({check: 1});
     };
 
     handleSubmit(e) {
-        if (this.state.check === 0){
+        if (this.state.check === 0) {
             return false;
         }
 
-        if(this.state.shares.length > 1)
-        {
-        const recovered = sss.combine(this.state.shares.slice(0, this.state.shares.length));
-        this.setState({rec : recovered.toString()});
+        if (this.state.shares.length > 1) {
+            const recovered = sss.combine(this.state.shares.slice(0, this.state.shares.length));
+            this.setState({rec: recovered.toString()});
         }
     }
 
@@ -56,29 +55,32 @@ class TextFields extends React.Component {
     }
 
     render() {
-        const {classes} = this.props;
-
         return (
             <div>
                 <div className="buttons">
-                <button class="btn btn-primary" style={{'margin-right' : '10px'}} onClick={(e) => this.addShare(e)}>Add Share</button>
-                <button class="btn btn-success" style={{'margin-left' : '10px'}} onClick={(e) => this.handleSubmit(e)}> Submit </button>
+                    <button class="btn btn-primary" style={{'margin-right': '10px'}}
+                            onClick={(e) => this.addShare(e)}>Add Share
+                    </button>
+                    <button class="btn btn-success" style={{'margin-left': '10px'}}
+                            onClick={(e) => this.handleSubmit(e)}> Submit
+                    </button>
                 </div>
                 {this.state.rec.length > 0 ?
-                    (<h5 className="walletdisplay" style={{color: '#28c749', 'align' : 'center'}}>Private Key: {this.state.rec}</h5>) : ''}
+                    (<h5 className="walletdisplay" style={{color: '#28c749', 'align': 'center'}}>Private
+                        Key: {this.state.rec}</h5>) : ''}
                 <div className="shareinput">
-                {
-                    this.state.shares.map((share, i) => {
-                        return (
-                            <div className="textfield" key={i}>
-                                <TextField fullWidth onChange={(e) => this.handleChange(e, i)}
-                                    value={share}
-                                    placeholder={'Enter share ' + (i)}
-                                />
-                            </div>
-                        )
-                    })
-                }
+                    {
+                        this.state.shares.map((share, i) => {
+                            return (
+                                <div className="textfield" key={i}>
+                                    <TextField fullWidth onChange={(e) => this.handleChange(e, i)}
+                                               value={share}
+                                               placeholder={'Enter share ' + (i)}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>);
     }
