@@ -7,8 +7,6 @@ import App from "./App";
 import Title from "./Logo"
 import SimpleBar from "./SimpleBar";
 
-import TextFields from "./TextField"
-
 const theme = createMuiTheme({
     palette: {
         primary: {
@@ -19,12 +17,6 @@ const theme = createMuiTheme({
         },
     },
 });
-
-//
-// ReactDOM.render(<MuiThemeProvider theme={theme}>
-//     {/*<SplitKey/>,*/}
-//     <TextFields/>
-// </MuiThemeProvider>, document.getElementById('root'));
 
 ReactDOM.render(<MuiThemeProvider theme={theme}>
     <SimpleBar/>,

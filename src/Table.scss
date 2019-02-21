@@ -21,12 +21,13 @@ $breakpoint-alpha: 480px; // adjust to your needs
     &:first-child {
       padding-top: .5em;
     }
+
     &:last-child {
       padding-bottom: .5em;
     }
 
     &:before {
-      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+      content: attr(data-th) ": "; // who knew you could do this? The internet, that's who.
       font-weight: bold;
 
       // optional stuff to make it look nicer
@@ -86,15 +87,18 @@ h1 {
   color: #fff;
   border-radius: .4em;
   overflow: hidden;
+
   tr {
     border-color: lighten(#34495E, 10%);
   }
+
   th, td {
     margin: .5em 1em;
     @media (min-width: $breakpoint-alpha) {
       padding: 1em !important;
     }
   }
+
   th, td:before {
     color: #dd5;
   }
