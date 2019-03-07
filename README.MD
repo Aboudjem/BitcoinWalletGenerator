@@ -33,11 +33,11 @@ npm install
 ## Example
 
 #### Generate BTC Address from a choosen Private Key
-![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator1.png)
-#### Combine shared parts of Private Key
-![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator2.png)
+![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator1.gif)
 #### Create a Shared Private Key
-![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator4.png)
+![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator2.gif)
+#### Combine shared parts of Private Key
+![Image of Wallet Generator|250x250](https://github.com/Aboudjem/WalletGenerator/blob/master/public/img/BitcoinGenerator3.gif)
 
 
 ## Contributing
