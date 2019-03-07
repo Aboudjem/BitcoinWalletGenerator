@@ -34,7 +34,9 @@ class TextFields extends React.Component {
     };
 
     handleChange(e, i) {
-        this.state.shares[i] = e.target.value;
+        let shares = {...this.state.shares};
+        shares[i] = e.target.value;
+        this.setState({shares});
         this.setState({shares: this.state.shares});
         this.setState({check: 1});
     };

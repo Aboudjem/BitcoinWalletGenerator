@@ -9,8 +9,8 @@ class Logo extends Component {
             <div>
                 <img id="logo"
                      alt="logo"
-                     src="https://journalducoin.com/wp-content/uploads/2018/08/BCIO_logo_square_256px.png"
-                     width="120px"></img>
+                     src="https://bitcoin.org/img/icons/logotop.svg"
+                     width="140px"></img>
             </div>
         );
     }
