@@ -1,3 +1,5 @@
+> **Archived on 2026-11: an abandoned 2019 experiment that no longer installs. Do not use it to make real wallets.**
+
 # Bitcoin Wallet Generator
 
 Bitcoin Wallet Generator allows you to create your Bitcoin wallet by choosing your own Private Key, 
